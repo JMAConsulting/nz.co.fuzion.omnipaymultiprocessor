@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  *
  * This abstract class should be extended by all payment gateways
  * throughout the Omnipay system.  It enforces implementation of
- * the GatewayInterface interface and defines various common attibutes
+ * the GatewayInterface interface and defines various common attributes
  * and methods that all gateways should have.
  *
  * Example:
@@ -318,7 +318,6 @@ abstract class AbstractGateway implements GatewayInterface
     protected function createRequest($class, array $parameters)
     {
         $obj = new $class($this->httpClient, $this->httpRequest);
-
         return $obj->initialize(array_replace($this->getParameters(), $parameters));
     }
 

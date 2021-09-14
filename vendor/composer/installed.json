@@ -1,6 +1,58 @@
 {
     "packages": [
         {
+            "name": "cloudcogsio/omnipay-firstatlanticcommerce-gateway",
+            "version": "v1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudcogsio/omnipay-firstatlanticcommerce-gateway.git",
+                "reference": "b73378dabff2d7190b58ca6e81fc35bb8e4e1610"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudcogsio/omnipay-firstatlanticcommerce-gateway/zipball/b73378dabff2d7190b58ca6e81fc35bb8e4e1610",
+                "reference": "b73378dabff2d7190b58ca6e81fc35bb8e4e1610",
+                "shasum": ""
+            },
+            "require": {
+                "league/iso3166": "~2.1.0",
+                "omnipay/common": "^3"
+            },
+            "time": "2021-07-28T03:33:57+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\FirstAtlanticCommerce\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Assing",
+                    "email": "ricardo@tsiana.ca"
+                }
+            ],
+            "description": "First Atlantic Commerce (FAC) Payment Gateway Driver for Omnipay",
+            "keywords": [
+                "api",
+                "cloudcogs",
+                "cloudcogs.io",
+                "first-atlantic-commerce",
+                "omnipay",
+                "payment-gateway"
+            ],
+            "support": {
+                "issues": "https://github.com/cloudcogsio/omnipay-firstatlanticcommerce-gateway/issues",
+                "source": "https://github.com/cloudcogsio/omnipay-firstatlanticcommerce-gateway/tree/v1.0.0"
+            },
+            "install-path": "../cloudcogsio/omnipay-firstatlanticcommerce-gateway"
+        },
+        {
             "name": "clue/stream-filter",
             "version": "v1.5.0",
             "version_normalized": "1.5.0.0",
@@ -270,12 +322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hamcrest/hamcrest-php.git",
-                "reference": "8c3d0a3f6af734494ad8f6fbbee0ba92422859f3"
+                "reference": "9891fca284ef0dfcb19c94453c29932c9bb9a3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/8c3d0a3f6af734494ad8f6fbbee0ba92422859f3",
-                "reference": "8c3d0a3f6af734494ad8f6fbbee0ba92422859f3",
+                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/9891fca284ef0dfcb19c94453c29932c9bb9a3c2",
+                "reference": "9891fca284ef0dfcb19c94453c29932c9bb9a3c2",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +342,8 @@
                 "phpunit/php-file-iterator": "^1.4 || ^2.0",
                 "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0"
             },
-            "time": "2020-07-09T08:09:16+00:00",
+            "time": "2021-08-12T08:29:30+00:00",
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -311,7 +364,72 @@
             "keywords": [
                 "test"
             ],
+            "support": {
+                "issues": "https://github.com/hamcrest/hamcrest-php/issues",
+                "source": "https://github.com/hamcrest/hamcrest-php/tree/master"
+            },
             "install-path": "../hamcrest/hamcrest-php"
+        },
+        {
+            "name": "league/iso3166",
+            "version": "2.1.5",
+            "version_normalized": "2.1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/iso3166.git",
+                "reference": "aed3b32fc293afdf2c6c6a322c2408eb5d20804a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/iso3166/zipball/aed3b32fc293afdf2c6c6a322c2408eb5d20804a",
+                "reference": "aed3b32fc293afdf2c6c6a322c2408eb5d20804a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.12",
+                "phpunit/phpunit": "^5.7.11 || ^6.0 || ^7.0"
+            },
+            "time": "2020-01-29T07:08:12+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "League\\ISO3166\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com"
+                }
+            ],
+            "description": "ISO 3166-1 PHP Library",
+            "homepage": "https://github.com/thephpleague/iso3166",
+            "keywords": [
+                "3166",
+                "3166-1",
+                "ISO 3166",
+                "countries",
+                "iso",
+                "library"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/iso3166/issues",
+                "source": "https://github.com/thephpleague/iso3166"
+            },
+            "install-path": "../league/iso3166"
         },
         {
             "name": "league/omnipay",
@@ -378,12 +496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "31467aeb3ca3188158613322d66df81cedd86626"
+                "reference": "6be90397edb62a85ff2f5d3cc660d0e1ce7e8896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/31467aeb3ca3188158613322d66df81cedd86626",
-                "reference": "31467aeb3ca3188158613322d66df81cedd86626",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/6be90397edb62a85ff2f5d3cc660d0e1ce7e8896",
+                "reference": "6be90397edb62a85ff2f5d3cc660d0e1ce7e8896",
                 "shasum": ""
             },
             "require": {
@@ -394,7 +512,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^5.7.10|^6.5|^7.5|^8.5|^9.3"
             },
-            "time": "2021-02-24T09:51:00+00:00",
+            "time": "2021-08-25T18:07:48+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -668,12 +786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-common.git",
-                "reference": "30c6db3e9c2df34c2c9ad854b8bca53b597b456a"
+                "reference": "006a45b5bfc2f6461e35dedce51dc1aa120df260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/30c6db3e9c2df34c2c9ad854b8bca53b597b456a",
-                "reference": "30c6db3e9c2df34c2c9ad854b8bca53b597b456a",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/006a45b5bfc2f6461e35dedce51dc1aa120df260",
+                "reference": "006a45b5bfc2f6461e35dedce51dc1aa120df260",
                 "shasum": ""
             },
             "require": {
@@ -693,7 +811,7 @@
             "suggest": {
                 "league/omnipay": "The default Omnipay package provides a default HTTP Adapter."
             },
-            "time": "2021-06-07T12:10:42+00:00",
+            "time": "2021-07-08T11:12:50+00:00",
             "default-branch": true,
             "type": "library",
             "extra": {
@@ -1160,12 +1278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-stripe.git",
-                "reference": "fbf57b33c34f227695e83c1cc92d9844f88ed5e8"
+                "reference": "16f822d40c208a07301aed88509b3cb7f2efe450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/fbf57b33c34f227695e83c1cc92d9844f88ed5e8",
-                "reference": "fbf57b33c34f227695e83c1cc92d9844f88ed5e8",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-stripe/zipball/16f822d40c208a07301aed88509b3cb7f2efe450",
+                "reference": "16f822d40c208a07301aed88509b3cb7f2efe450",
                 "shasum": ""
             },
             "require": {
@@ -1176,7 +1294,8 @@
                 "phpro/grumphp": "^0.14",
                 "squizlabs/php_codesniffer": "^3"
             },
-            "time": "2020-06-30T21:21:16+00:00",
+            "time": "2021-08-08T10:49:23+00:00",
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1213,6 +1332,10 @@
                 "payment",
                 "stripe"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/omnipay-stripe/issues",
+                "source": "https://github.com/thephpleague/omnipay-stripe/tree/master"
+            },
             "install-path": "../omnipay/stripe"
         },
         {
@@ -1453,17 +1576,17 @@
         },
         {
             "name": "php-http/client-common",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "2.4.0",
+            "version_normalized": "2.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/client-common.git",
-                "reference": "e37e46c610c87519753135fb893111798c69076a"
+                "reference": "29e0c60d982f04017069483e832b92074d0a90b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/client-common/zipball/e37e46c610c87519753135fb893111798c69076a",
-                "reference": "e37e46c610c87519753135fb893111798c69076a",
+                "url": "https://api.github.com/repos/php-http/client-common/zipball/29e0c60d982f04017069483e832b92074d0a90b2",
+                "reference": "29e0c60d982f04017069483e832b92074d0a90b2",
                 "shasum": ""
             },
             "require": {
@@ -1492,8 +1615,7 @@
                 "php-http/logger-plugin": "PSR-3 Logger plugin",
                 "php-http/stopwatch-plugin": "Symfony Stopwatch plugin"
             },
-            "time": "2020-07-21T10:04:13+00:00",
-            "default-branch": true,
+            "time": "2021-07-05T08:19:25+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1526,7 +1648,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/client-common/issues",
-                "source": "https://github.com/php-http/client-common/tree/2.3.0"
+                "source": "https://github.com/php-http/client-common/tree/2.4.0"
             },
             "install-path": "../php-http/client-common"
         },
@@ -1740,17 +1862,17 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.11.1",
-            "version_normalized": "1.11.1.0",
+            "version": "1.12.0",
+            "version_normalized": "1.12.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc"
+                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/887734d9c515ad9a564f6581a682fff87a6253cc",
-                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc",
+                "url": "https://api.github.com/repos/php-http/message/zipball/39eb7548be982a81085fe5a6e2a44268cd586291",
+                "reference": "39eb7548be982a81085fe5a6e2a44268cd586291",
                 "shasum": ""
             },
             "require": {
@@ -1776,7 +1898,7 @@
                 "laminas/laminas-diactoros": "Used with Diactoros Factories",
                 "slim/slim": "Used with Slim Framework PSR-7 implementation"
             },
-            "time": "2021-05-24T18:11:08+00:00",
+            "time": "2021-08-29T09:13:12+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1811,7 +1933,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.11.1"
+                "source": "https://github.com/php-http/message/tree/1.12.0"
             },
             "install-path": "../php-http/message"
         },
@@ -1875,19 +1997,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/mock-client.git",
-                "reference": "c877d4c78128315701ded02d3a4ba3d59990b9ee"
+                "reference": "a797c2a9122cccafcce14773b8a24d2808a9ab44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/mock-client/zipball/c877d4c78128315701ded02d3a4ba3d59990b9ee",
-                "reference": "c877d4c78128315701ded02d3a4ba3d59990b9ee",
+                "url": "https://api.github.com/repos/php-http/mock-client/zipball/a797c2a9122cccafcce14773b8a24d2808a9ab44",
+                "reference": "a797c2a9122cccafcce14773b8a24d2808a9ab44",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0",
-                "php-http/client-common": "^1.9 || ^2.0",
+                "php-http/client-common": "^2.0",
                 "php-http/discovery": "^1.0",
-                "php-http/httplug": "^1.0 || ^2.0",
+                "php-http/httplug": "^2.0",
                 "php-http/message-factory": "^1.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
@@ -1896,17 +2018,18 @@
             },
             "provide": {
                 "php-http/async-client-implementation": "1.0",
-                "php-http/client-implementation": "1.0"
+                "php-http/client-implementation": "1.0",
+                "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^5.1 || ^6.0"
             },
-            "time": "2020-12-22T07:03:06+00:00",
+            "time": "2021-08-25T07:01:14+00:00",
             "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "installation-source": "source",
@@ -1935,7 +2058,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/mock-client/issues",
-                "source": "https://github.com/php-http/mock-client/tree/master"
+                "source": "https://github.com/php-http/mock-client/tree/1.5.0"
             },
             "install-path": "../php-http/mock-client"
         },
@@ -2058,12 +2181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "8719cc12e2a57ec3432a76989bb4ef773ac75b63"
+                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/8719cc12e2a57ec3432a76989bb4ef773ac75b63",
-                "reference": "8719cc12e2a57ec3432a76989bb4ef773ac75b63",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
+                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
                 "shasum": ""
             },
             "require": {
@@ -2074,9 +2197,10 @@
                 "webmozart/assert": "^1.9.1"
             },
             "require-dev": {
-                "mockery/mockery": "~1.3.2"
+                "mockery/mockery": "~1.3.2",
+                "psalm/phar": "^4.8"
             },
-            "time": "2021-04-23T09:50:58+00:00",
+            "time": "2021-09-05T10:40:50+00:00",
             "default-branch": true,
             "type": "library",
             "extra": {
@@ -2118,12 +2242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "6759f2268deb9f329812679e9dcb2d0083b2a30b"
+                "reference": "7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/6759f2268deb9f329812679e9dcb2d0083b2a30b",
-                "reference": "6759f2268deb9f329812679e9dcb2d0083b2a30b",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb",
+                "reference": "7b2df704cbe99a7b0522c7d5d7b7c5ea61b196bb",
                 "shasum": ""
             },
             "require": {
@@ -2131,9 +2255,10 @@
                 "phpdocumentor/reflection-common": "^2.0"
             },
             "require-dev": {
-                "ext-tokenizer": "*"
+                "ext-tokenizer": "*",
+                "psalm/phar": "^4.8"
             },
-            "time": "2021-02-02T21:09:27+00:00",
+            "time": "2021-08-20T10:47:25+00:00",
             "default-branch": true,
             "type": "library",
             "extra": {
@@ -2770,8 +2895,8 @@
         },
         {
             "name": "psr/log",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "1.1.4",
+            "version_normalized": "1.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
@@ -2787,7 +2912,6 @@
                 "php": ">=5.3.0"
             },
             "time": "2021-05-03T11:20:27+00:00",
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3532,17 +3656,17 @@
         },
         {
             "name": "sudiptpa/omnipay-nabtransact",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "v3.1.0",
+            "version_normalized": "3.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sudiptpa/omnipay-nabtransact.git",
-                "reference": "943bc626ec256741fd89e4e2012e382859f36a9f"
+                "reference": "cd341c63f5e076bdb9e7753b45c43075719dcba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sudiptpa/omnipay-nabtransact/zipball/943bc626ec256741fd89e4e2012e382859f36a9f",
-                "reference": "943bc626ec256741fd89e4e2012e382859f36a9f",
+                "url": "https://api.github.com/repos/sudiptpa/omnipay-nabtransact/zipball/cd341c63f5e076bdb9e7753b45c43075719dcba3",
+                "reference": "cd341c63f5e076bdb9e7753b45c43075719dcba3",
                 "shasum": ""
             },
             "require": {
@@ -3553,7 +3677,7 @@
                 "phpro/grumphp": "^0.14.0",
                 "squizlabs/php_codesniffer": "^3"
             },
-            "time": "2020-07-14T12:56:46+00:00",
+            "time": "2021-08-11T03:58:14+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3586,6 +3710,10 @@
                 "pay",
                 "payment"
             ],
+            "support": {
+                "issues": "https://github.com/sudiptpa/omnipay-nabtransact/issues",
+                "source": "https://github.com/sudiptpa/omnipay-nabtransact/tree/v3.1.0"
+            },
             "install-path": "../sudiptpa/omnipay-nabtransact"
         },
         {
@@ -3595,25 +3723,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "8759ed5c27c2a8a47cb60f367f4be6727f08d58b"
+                "reference": "09b3202651ab23ac8dcf455284a48a3500e56731"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8759ed5c27c2a8a47cb60f367f4be6727f08d58b",
-                "reference": "8759ed5c27c2a8a47cb60f367f4be6727f08d58b",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/09b3202651ab23ac8dcf455284a48a3500e56731",
+                "reference": "09b3202651ab23ac8dcf455284a48a3500e56731",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
                 "symfony/mime": "^4.3|^5.0",
                 "symfony/polyfill-mbstring": "~1.1",
-                "symfony/polyfill-php80": "^1.15"
+                "symfony/polyfill-php80": "^1.16"
             },
             "require-dev": {
                 "predis/predis": "~1.0",
                 "symfony/expression-language": "^3.4|^4.0|^5.0"
             },
-            "time": "2021-06-26T21:56:04+00:00",
+            "time": "2021-08-26T15:51:23+00:00",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -3666,18 +3794,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "1a2bdd55e13e295f63a57a5838029bf41b1969bf"
+                "reference": "13029c7817afc0db051eb178c25300cd10ca931f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/1a2bdd55e13e295f63a57a5838029bf41b1969bf",
-                "reference": "1a2bdd55e13e295f63a57a5838029bf41b1969bf",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/13029c7817afc0db051eb178c25300cd10ca931f",
+                "reference": "13029c7817afc0db051eb178c25300cd10ca931f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
                 "symfony/polyfill-intl-idn": "^1.10",
-                "symfony/polyfill-mbstring": "^1.0"
+                "symfony/polyfill-mbstring": "^1.0",
+                "symfony/polyfill-php80": "^1.16"
             },
             "conflict": {
                 "egulias/email-validator": "~3.0.0",
@@ -3687,7 +3816,7 @@
                 "egulias/email-validator": "^2.1.10|^3.1",
                 "symfony/dependency-injection": "^3.4|^4.1|^5.0"
             },
-            "time": "2021-06-08T11:22:53+00:00",
+            "time": "2021-09-03T07:35:20+00:00",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -3744,18 +3873,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "2e607d627c70aa56284a02d34fc60dfe3a9a352e"
+                "reference": "fa0b12a3a47ed25749d47d6b4f61412fd5ca1554"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/2e607d627c70aa56284a02d34fc60dfe3a9a352e",
-                "reference": "2e607d627c70aa56284a02d34fc60dfe3a9a352e",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/fa0b12a3a47ed25749d47d6b4f61412fd5ca1554",
+                "reference": "fa0b12a3a47ed25749d47d6b4f61412fd5ca1554",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3"
+                "php": ">=7.1.3",
+                "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2021-05-26T11:20:16+00:00",
+            "time": "2021-08-04T20:31:23+00:00",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -4239,18 +4369,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
-                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
+                "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2021-02-19T12:13:01+00:00",
+            "time": "2021-07-28T13:41:28+00:00",
             "default-branch": true,
             "type": "library",
             "extra": {
@@ -4301,7 +4431,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.1"
             },
             "funding": [
                 {
@@ -4321,17 +4451,17 @@
         },
         {
             "name": "theseer/tokenizer",
-            "version": "1.2.0",
-            "version_normalized": "1.2.0.0",
+            "version": "1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "75a63c33a8577608444246075ea0af0d052e452a"
+                "reference": "34a41e998c2183e22995f158c581e7b5e755ab9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/75a63c33a8577608444246075ea0af0d052e452a",
-                "reference": "75a63c33a8577608444246075ea0af0d052e452a",
+                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/34a41e998c2183e22995f158c581e7b5e755ab9e",
+                "reference": "34a41e998c2183e22995f158c581e7b5e755ab9e",
                 "shasum": ""
             },
             "require": {
@@ -4340,7 +4470,7 @@
                 "ext-xmlwriter": "*",
                 "php": "^7.2 || ^8.0"
             },
-            "time": "2020-07-12T23:59:07+00:00",
+            "time": "2021-07-28T10:34:58+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -4362,7 +4492,7 @@
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "support": {
                 "issues": "https://github.com/theseer/tokenizer/issues",
-                "source": "https://github.com/theseer/tokenizer/tree/master"
+                "source": "https://github.com/theseer/tokenizer/tree/1.2.1"
             },
             "funding": [
                 {
@@ -4433,6 +4563,62 @@
                 "source": "https://github.com/webmozarts/assert/tree/master"
             },
             "install-path": "../webmozart/assert"
+        },
+        {
+            "name": "xepan/CCAvenue",
+            "version": "dev-omnipay_3",
+            "version_normalized": "dev-omnipay_3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:xepan/ccavenue.git",
+                "reference": "origin/master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JMAConsulting/ccavenue/zipball/a3665298a32c8a5a79d080f8dcdcfa8eee0bc6c8",
+                "reference": "a3665298a32c8a5a79d080f8dcdcfa8eee0bc6c8",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "~3.1",
+                "php": ">=5.3"
+            },
+            "time": "2021-09-10T06:53:44+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\CCAvenue\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Xavoc Technocrats Pvt. Ltd.",
+                    "email": "info@xavoc.com"
+                }
+            ],
+            "description": "CC Avenue Payment Gateway for OmniPay ",
+            "homepage": "https://github.com/xepan/omnipay_ccavenue",
+            "keywords": [
+                "CCAvenue",
+                "ERP",
+                "Omnipay",
+                "PaymentGateway",
+                "SaaS",
+                "xEpan"
+            ],
+            "support": {
+                "source": "https://github.com/JMAConsulting/ccavenue/tree/omnipay_3"
+            },
+            "install-path": "../xepan/CCAvenue"
         }
     ],
     "dev": true,

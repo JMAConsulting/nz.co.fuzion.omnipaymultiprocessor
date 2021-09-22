@@ -80,7 +80,7 @@ class AuthorizeRequest extends AbstractRequest
     /**
      * @return array
      */
-    public function getBaseData(){
+    public function getBaseData() {
         return array(
             'access_key' => $this->getAccessKey(),
             'profile_id' => $this->getProfileId(),
@@ -96,7 +96,7 @@ class AuthorizeRequest extends AbstractRequest
             'expiry_year' => $this->getCard()->getExpiryYear(),
             'cvv_number' => $this->getCard()->getCvv(),
             'tid' => $this->parameters->get('transactionId'),
-            'order_id' => $this->parameters->get('orderId'),
+            'order_id' => $this->parameters->get('orderId') ?? $this->getUniqueID(),
             'amount' => $this->parameters->get('amount'),
             'currency' => $this->parameters->get('currency'),
             'redirect_url' => $this->parameters->get('returnUrl'),

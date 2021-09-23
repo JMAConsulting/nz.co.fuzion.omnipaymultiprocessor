@@ -69,6 +69,36 @@ return [
         'state_province' => "billing_state_province_id-{$billingLocationID}",
         'postal_code' => "billing_postal_code-{$billingLocationID}",
       ],
+      'payment_fields' => ['credit_card_type', 'credit_card_number', 'credit_card_exp_date', 'cvv2', 'issuer', 'paymentType'],
+      'payment_fields_metadata' => [
+        'issuer' => [
+          'name' => 'issuer',
+          'htmlType' => 'text',
+          'title' => ts('Issuing Bank'),
+          'is_required' => TRUE,
+          'is_pass_through' => TRUE,
+          'attributes' => [
+            'size' => 20,
+            'maxlength' => 100,
+            'autocomplete' => 'off',
+            'id' => 'issuingBank',
+          ],
+        ],
+        'paymentType' => [
+          'name' => 'paymentType',
+          'htmlType' => 'Select',
+          'title' => ts('Card Type'),
+          'is_required' => TRUE,
+          'is_pass_through' => TRUE,
+          'attributes' => [
+              'CRDC' => ts('Credit Card'),
+              'DBCRD' => ts('Debit Card'),
+              'NBK' => ts('Net Banking'),
+              'CASHC' => ts('Cash Card'),
+              'MOBP' => ts('Mobile Payments'),
+          ],
+        ],
+      ],
       'fields' => [
         'card_type' => [
           'core_field_name' => 'credit_card_type',

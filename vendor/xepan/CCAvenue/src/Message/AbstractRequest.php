@@ -87,33 +87,14 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return 'POST';
     }
 
-    public function getCardTypes()
+    public function setPaymentType($value)
     {
-        return array(
-            'visa' => '001',
-            'mastercard' => '002',
-            'amex' => '003',
-            'discover' => '004',
-            'diners_club' => '005',
-            'carte_blanche' => '006',
-            'jcb' => '007',
-            'jal' => '021',
-            'maestro' => '024',
-            'delta' => '031',
-            'visa_electron' => '033',
-            'dankort' => '034',
-            'carte_bleue' => '036',
-            'carta_si' => '037',
-            'maestro_international' => '042',
-            'ge_money_uk_card' => '043'
-        );
+        return $this->setParameter('paymentType', $value);
     }
 
-    public function getCardType()
+    public function getPaymentType()
     {
-        $types = $this->getCardTypes();
-        $brand = $this->getCard()->getBrand();
-        return empty($types[$brand]) ? NULL : $types[$brand];
+        return $this->getParameter('paymentType');
     }
 
     /**

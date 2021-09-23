@@ -91,7 +91,8 @@ class AuthorizeRequest extends AbstractRequest
             'merchant_id' => $this->getProfileId(),
             'card_number' => $this->getCard()->getNumber(),
             'card_name' => $this->getCard()->getBillingName(),
-            'card_type' => $this->getCardType(),
+            'card_type' => $this->getPaymentType(),
+            'payment_type' => 'OPT' . $this->getPaymentType(),
             'expiry_month' => $this->getCard()->getExpiryMonth(),
             'expiry_year' => $this->getCard()->getExpiryYear(),
             'cvv_number' => $this->getCard()->getCvv(),
@@ -117,7 +118,8 @@ class AuthorizeRequest extends AbstractRequest
             'delivery_zip'=> $this->parameters->get('delivery_zip'),
             'delivery_country'=> $this->parameters->get('delivery_country'),
             'delivery_tel'=> $this->parameters->get('delivery_tel'),
-            'delivery_email'=> $this->parameters->get('delivery_email')
+            'delivery_email'=> $this->parameters->get('delivery_email'),
+            'issuing_bank' => $this->getIssuer(),
         );
     }
 

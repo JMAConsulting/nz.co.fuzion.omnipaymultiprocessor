@@ -81,6 +81,7 @@ class AuthorizeRequest extends AbstractRequest
      * @return array
      */
     public function getBaseData() {
+        $phone = !empty($this->getCard()->getBillingPhone()) ? $this->getCard()->getBillingPhone() : '0000000000';
         return array(
             'access_key' => $this->getAccessKey(),
             'profile_id' => $this->getProfileId(),
@@ -92,7 +93,7 @@ class AuthorizeRequest extends AbstractRequest
             'card_number' => $this->getCard()->getNumber(),
             'card_name' => $this->getCard()->getBillingName(),
             'card_type' => $this->getPaymentType(),
-            'payment_type' => 'OPT' . $this->getPaymentType(),
+            'payment_option' => 'OPT' . $this->getPaymentType(),
             'expiry_month' => $this->getCard()->getExpiryMonth(),
             'expiry_year' => $this->getCard()->getExpiryYear(),
             'cvv_number' => $this->getCard()->getCvv(),
@@ -110,16 +111,17 @@ class AuthorizeRequest extends AbstractRequest
             'billing_zip'=> $this->getCard()->getPostcode(),
             'billing_country'=> $this->getCard()->getCountry(),
             'billing_email'=> $this->getCard()->getEmail(),
-            'billing_tel'=> $this->getCard()->getBillingPhone(),
-            'delivery_name'=> $this->getCard()->getShippingName(),
-            'delivery_address'=> $this->getCard()->getShippingAddress1() . '  ' . $this->getCard()->getShippingAddress2(),
-            'delivery_city'=> $this->getCard()->getShippingCity(),
-            'delivery_state'=> $this->parameters->get('delivery_state'),
-            'delivery_zip'=> $this->parameters->get('delivery_zip'),
-            'delivery_country'=> $this->parameters->get('delivery_country'),
-            'delivery_tel'=> $this->parameters->get('delivery_tel'),
-            'delivery_email'=> $this->parameters->get('delivery_email'),
+            'billing_tel'=> $phone,
+            'delivery_name'=> $this->getCard()->getBillingName(),
+            'delivery_address'=> $this->getCard()->getAddress1() . '  ' . $this->getCard()->getAddress2(),
+            'delivery_city'=> $this->getCard()->getCity(),
+            'delivery_state'=> $this->getCard()->getBillingState(),
+            'delivery_zip'=> $this->getCard()->getPostcode(),
+            'delivery_country'=> $this->getCard()->getCountry(),
+            'delivery_tel'=> $phone,
+            'delivery_email'=> $this->getCard()->getEmail(),
             'issuing_bank' => $this->getIssuer(),
+            'data_accept' => 'Y',
         );
     }
 

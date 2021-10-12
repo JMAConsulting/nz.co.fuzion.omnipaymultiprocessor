@@ -15,7 +15,6 @@ class CompletePurchaseRequest extends AuthorizeRequest
     $workingKey=$this->getSecretKey();   //Working Key should be provided here.
     $encResponse=$data["encResp"];     //This is the response sent by the CCAvenue Server
     $rcvdString=ccavenue_decrypt($encResponse,$workingKey);    //Crypto Decryption used as per the specified working key.
-    
     $order_status="";
     $decryptValues=explode('&', $rcvdString);
     $dataSize=sizeof($decryptValues);
@@ -27,7 +26,7 @@ class CompletePurchaseRequest extends AuthorizeRequest
       if($i==3) $order_status=$information[1];
     }
     
-    if(!in_array($order_status, ['Success','Aborted','Failure'])) {
+    if(!in_array($order_status, ['Success','Aborted','Failure', 'Invalid'])) {
         throw new InvalidRequestException('signature mismatch');
     }
     

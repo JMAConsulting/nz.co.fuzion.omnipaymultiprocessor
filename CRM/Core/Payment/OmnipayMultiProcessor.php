@@ -1128,7 +1128,7 @@ class CRM_Core_Payment_OmnipayMultiProcessor extends CRM_Core_Payment_PaymentExt
       else {
         // I looked at authorize rather than purchase but for both paypal it seems worse & for eway
         // some complaint about double email.
-        $response = $this->gateway->purchase($this->getCreditCardOptions($params))
+        $response = $this->gateway->authorize($this->getCreditCardOptions($params))
           ->send();
       }
 

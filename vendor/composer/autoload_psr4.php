@@ -29,6 +29,8 @@ return array(
     'Omnipay\\Razorpay\\' => array($vendorDir . '/razorpay/omnipay-razorpay/src'),
     'Omnipay\\PaymentExpress\\' => array($vendorDir . '/omnipay/paymentexpress/src'),
     'Omnipay\\PayPal\\' => array($vendorDir . '/omnipay/paypal/src'),
+    'Omnipay\\PayMaya\\Tests\\' => array($vendorDir . '/chaospower/omnipay-paymaya/tests'),
+    'Omnipay\\PayMaya\\' => array($vendorDir . '/chaospower/omnipay-paymaya/src'),
     'Omnipay\\NABTransact\\' => array($vendorDir . '/sudiptpa/omnipay-nabtransact/src'),
     'Omnipay\\Mollie\\' => array($vendorDir . '/omnipay/mollie/src'),
     'Omnipay\\Mercanet\\' => array($vendorDir . '/fuzion/omnipay-mercanet/src'),

@@ -56,6 +56,8 @@ class ComposerStaticInit7c7bccbe7d16fd96ad45f827acd06a81
             'Omnipay\\Razorpay\\' => 17,
             'Omnipay\\PaymentExpress\\' => 23,
             'Omnipay\\PayPal\\' => 15,
+            'Omnipay\\PayMaya\\Tests\\' => 22,
+            'Omnipay\\PayMaya\\' => 16,
             'Omnipay\\NABTransact\\' => 20,
             'Omnipay\\Mollie\\' => 15,
             'Omnipay\\Mercanet\\' => 17,
@@ -189,6 +191,14 @@ class ComposerStaticInit7c7bccbe7d16fd96ad45f827acd06a81
         'Omnipay\\PayPal\\' => 
         array (
             0 => __DIR__ . '/..' . '/omnipay/paypal/src',
+        ),
+        'Omnipay\\PayMaya\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chaospower/omnipay-paymaya/tests',
+        ),
+        'Omnipay\\PayMaya\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chaospower/omnipay-paymaya/src',
         ),
         'Omnipay\\NABTransact\\' => 
         array (

@@ -1,6 +1,52 @@
 {
     "packages": [
         {
+            "name": "chaospower/omnipay-paymaya",
+            "version": "dev-omnipay_3",
+            "version_normalized": "dev-omnipay_3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JMAConsulting/omnipay-paymaya.git",
+                "reference": "0f76dce8da3f46444741936fa670a9bebacf74dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JMAConsulting/omnipay-paymaya/zipball/0f76dce8da3f46444741936fa670a9bebacf74dd",
+                "reference": "0f76dce8da3f46444741936fa670a9bebacf74dd",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "~3.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "omnipay/tests": "~3.0"
+            },
+            "time": "2021-11-09T05:23:11+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\PayMaya\\": "src/",
+                    "Omnipay\\PayMaya\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Randy Glenn Aguirre",
+                    "email": "rgat.randy@gmail.com"
+                }
+            ],
+            "description": "Omnipay PayMaya Payment Gateway",
+            "support": {
+                "source": "https://github.com/JMAConsulting/omnipay-paymaya/tree/omnipay_3"
+            },
+            "install-path": "../chaospower/omnipay-paymaya"
+        },
+        {
             "name": "cloudcogsio/omnipay-firstatlanticcommerce-gateway",
             "version": "v1.0.0",
             "version_normalized": "1.0.0.0",

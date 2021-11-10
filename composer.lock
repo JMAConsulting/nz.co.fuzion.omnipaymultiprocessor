@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6710445ab3f2c887f0dd1feebda465cf",
+    "content-hash": "701d197865a1ca724cbb78a1b7b1fed8",
     "packages": [
+        {
+            "name": "chaospower/omnipay-paymaya",
+            "version": "dev-omnipay_3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JMAConsulting/omnipay-paymaya.git",
+                "reference": "0f76dce8da3f46444741936fa670a9bebacf74dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JMAConsulting/omnipay-paymaya/zipball/0f76dce8da3f46444741936fa670a9bebacf74dd",
+                "reference": "0f76dce8da3f46444741936fa670a9bebacf74dd",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "~3.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "omnipay/tests": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\PayMaya\\": "src/",
+                    "Omnipay\\PayMaya\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Randy Glenn Aguirre",
+                    "email": "rgat.randy@gmail.com"
+                }
+            ],
+            "description": "Omnipay PayMaya Payment Gateway",
+            "support": {
+                "source": "https://github.com/JMAConsulting/omnipay-paymaya/tree/omnipay_3"
+            },
+            "time": "2021-11-09T05:23:11+00:00"
+        },
         {
             "name": "cloudcogsio/omnipay-firstatlanticcommerce-gateway",
             "version": "v1.0.0",
@@ -4530,6 +4573,7 @@
         "fuzion/omnipay-mercanet": 20,
         "razorpay/omnipay-razorpay": 20,
         "xepan/ccavenue": 20,
+        "chaospower/omnipay-paymaya": 20,
         "omnipay/tests": 20
     },
     "prefer-stable": false,

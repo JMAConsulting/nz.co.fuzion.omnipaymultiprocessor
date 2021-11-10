@@ -19,8 +19,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/JMAConsulting/ccavenue.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/JMAConsulting/omnipay-paymaya.git"
         }
-
     ],
     "require":
     {
@@ -42,7 +45,8 @@
         "razorpay/omnipay-razorpay": "^3.0@dev",
         "clue/stream-filter": "^1.4.1",
         "cloudcogsio/omnipay-firstatlanticcommerce-gateway" : "~1.0.0",
-        "xepan/ccavenue": "dev-omnipay_3"
+        "xepan/ccavenue": "dev-omnipay_3",
+        "chaospower/omnipay-paymaya": "dev-omnipay_3"
     },
     "replace": {
       "guzzlehttp/guzzle": "^6.0",

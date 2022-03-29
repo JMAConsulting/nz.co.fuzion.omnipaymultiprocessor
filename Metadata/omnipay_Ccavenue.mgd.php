@@ -69,7 +69,8 @@ return [
         'state_province' => "billing_state_province_id-{$billingLocationID}",
         'postal_code' => "billing_postal_code-{$billingLocationID}",
       ],
-      'payment_fields' => ['credit_card_type', 'credit_card_number', 'credit_card_exp_date', 'cvv2', 'issuer', 'paymentType'],
+      'create_card_action' => 'purchase',
+      'payment_fields' => [],
       'payment_fields_metadata' => [
         'issuer' => [
           'name' => 'issuer',
@@ -97,6 +98,22 @@ return [
               'CASHC' => ts('Cash Card'),
               'MOBP' => ts('Mobile Payments'),
           ],
+        ],
+        'is_recur' => [
+          'name' => 'is_recur',
+          'is_pass_through' => TRUE,
+        ],
+        'frequency_unit' => [
+          'name' => 'frequency_unit',
+          'is_pass_through' => TRUE,
+        ],
+        'frequency_interval' => [
+          'name' => 'frequency_interval',
+          'is_pass_through' => TRUE,
+        ],
+        'installments' => [
+          'name' => 'installments',
+          'is_pass_through' => TRUE,
         ],
       ],
       'fields' => [
@@ -157,9 +174,9 @@ return [
       'url_site_test_default' => 'http://unused.com',
       'url_recur_test_default' => 'http://unused.com',
       'url_api_test_default' => 'http://unused.com',
-      'billing_mode' => 1,
-      'payment_type' => 1,
-      'is_recur' => 1,
+      'billing_mode' => 4,
+      'payment_type' => 3,
+      'is_recur' => 0,
       'is_active' => 1,
     ],
   ],

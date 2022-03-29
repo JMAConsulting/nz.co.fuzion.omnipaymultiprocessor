@@ -24,7 +24,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
   public function getTransactionReference()
   {
-    return isset($this->data['req_reference_number']) ? $this->data['req_reference_number'] : null;
+    return isset($this->data['tracking_id']) ? $this->data['tracking_id'] : null;
   }
 
   public function getMessage()

@@ -151,7 +151,7 @@ class CRM_Core_Payment_OmnipayMultiProcessor extends CRM_Core_Payment_PaymentExt
     $params['component'] = strtolower($component);
     $this->initialize($params);
     $this->saveBillingAddressIfRequired($params);
-
+    \CRM_Core_Config::singleton()->userSystem->prePostRedirect();
     try {
       if (!empty($params['token'])) {
         $response = $this->doTokenPayment($params);

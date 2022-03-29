@@ -26,10 +26,10 @@ class CompletePurchaseRequest extends AuthorizeRequest
       if($i==3) $order_status=$information[1];
     }
     
-    if(!in_array($order_status, ['Success','Aborted','Failure', 'Invalid'])) {
+    \Civi::log()->debug('{response_data}', ['response_data' => $response_data]); 
+    if(!in_array($order_status, ['Success','Aborted','Failure', 'Invalid', 'Initiated'])) {
         throw new InvalidRequestException('signature mismatch');
     }
-    
     return $response_data;
   }
 

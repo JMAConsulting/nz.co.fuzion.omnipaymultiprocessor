@@ -55,6 +55,7 @@ class Gateway extends AbstractGateway
      */
     public function purchase(array $parameters = array())
     {
+        \Civi::log()->debug('{parameters}', ['parameters' => $parameters]);
         return $this->createRequest('\Omnipay\CCAvenue\Message\PurchaseRequest', $parameters);
     }
 

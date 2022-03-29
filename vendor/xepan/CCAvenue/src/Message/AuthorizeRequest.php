@@ -12,7 +12,7 @@ class AuthorizeRequest extends AbstractRequest
 
         $this->validate('currency', 'amount');
         $data = $this->getBaseData();
-
+        // $data = $this->getStandingJurisdictionParams($data);
         $data['signed_date_time'] = gmdate("Y-m-d\TH:i:s\Z");
         $data['unsigned_field_names'] = 'card_type,card_number,card_expiry_date';
         $data['signed_field_names'] = implode(',', array_keys($data)) . ',signed_field_names';
@@ -90,13 +90,6 @@ class AuthorizeRequest extends AbstractRequest
             'transaction_uuid' => $this->getUniqueID(),
             'transaction_type' => $this->getTransactionType(),
             'merchant_id' => $this->getProfileId(),
-            'card_number' => $this->getCard()->getNumber(),
-            'card_name' => $this->getCard()->getBillingName(),
-            'card_type' => $this->getPaymentType(),
-            'payment_option' => 'OPT' . $this->getPaymentType(),
-            'expiry_month' => $this->getCard()->getExpiryMonth(),
-            'expiry_year' => $this->getCard()->getExpiryYear(),
-            'cvv_number' => $this->getCard()->getCvv(),
             'tid' => $this->parameters->get('transactionId'),
             'order_id' => $this->parameters->get('orderId') ?? $this->getUniqueID(),
             'amount' => $this->parameters->get('amount'),
@@ -168,6 +161,14 @@ class AuthorizeRequest extends AbstractRequest
     public function setOrderId($value)
     {
         return $this->setParameter('orderId', $value);
+    }
+
+    public function getStandingJurisdictionParams($data)
+    {
+      $recur = $this->getParameter('is_recur') ?? FALSE;
+      if (!empty($recur)) {
+//        $data[
+      }
     }
 
 }

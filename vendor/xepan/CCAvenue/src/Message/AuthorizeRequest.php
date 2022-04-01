@@ -163,16 +163,47 @@ class AuthorizeRequest extends AbstractRequest
         return $this->setParameter('orderId', $value);
     }
 
+    public function getIsRecur()
+    {
+        return $this->getParameter('isRecur');
+    }
+
+    public function setIsRecur($value)
+    {
+        return $this->setParameter('isRecur', $value);
+    }
+
+    public function getFrequencyInterval()
+    {
+        return $this->getParameter('frequencyInterval');
+    }
+
+    public function setFrequencyInterval($value)
+    {
+        return $this->setParameter('frequencyInterval', $value);
+    }
+
+    public function getFrequencyUnit()
+    {
+        return $this->getParameter('frequencyUnit');
+    }
+
+    public function setFrequencyUnit($value)
+    {
+        return $this->setParameter('frequencyUnit', $value);
+    }
+
+
     public function getStandingJurisdictionParams($data)
     {
-      $recur = $this->getParameter('is_recur') ?? FALSE;
+      $recur = $this->getIsRecur();
       if (!empty($recur)) {
         $data['si_type'] = 'fixed';
-        $data['si_frequency'] = ucwords($this->parameters->get('frequency_unit'));
+        $data['si_frequency'] = ucwords($this->getFrequencyUnit());
         $data['si_amount'] = $this->parameters->get('amount');
-        $data['si_frequency_no'] = $this->parameters->get('frequency_interval');
+        $data['si_frequency_no'] = $this->getFrequencyInterval();
         $data['si_billing_cycle'] = 1;
-        $data['si_start_date'] = date('Y-m-d H:i:s', strtotime('+' . $this->parameters->get('frequency_interval') . ' ' . ucwords($this->parameters->get('frequency_unit')), time()));
+        $data['si_start_date'] = date('Y-m-d H:i:s', strtotime('+' . $this->getFrequencyInterval() . ' ' . ucwords($this->getFrequencyUnit()), time()));
         $data['si_setup_amount'] = $this->parameters->get('amount');
       }
       return $data;

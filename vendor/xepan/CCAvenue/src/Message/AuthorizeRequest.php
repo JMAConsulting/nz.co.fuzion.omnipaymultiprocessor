@@ -12,7 +12,7 @@ class AuthorizeRequest extends AbstractRequest
 
         $this->validate('currency', 'amount');
         $data = $this->getBaseData();
-        // $data = $this->getStandingJurisdictionParams($data);
+        $data = $this->getStandingJurisdictionParams($data);
         $data['signed_date_time'] = gmdate("Y-m-d\TH:i:s\Z");
         $data['unsigned_field_names'] = 'card_type,card_number,card_expiry_date';
         $data['signed_field_names'] = implode(',', array_keys($data)) . ',signed_field_names';
@@ -167,8 +167,15 @@ class AuthorizeRequest extends AbstractRequest
     {
       $recur = $this->getParameter('is_recur') ?? FALSE;
       if (!empty($recur)) {
-//        $data[
+        $data['si_type'] = 'fixed';
+        $data['si_frequency'] = ucwords($this->parameters->get('frequency_unit'));
+        $data['si_amount'] = $this->parameters->get('amount');
+        $data['si_frequency_no'] = $this->parameters->get('frequency_interval');
+        $data['si_billing_cycle'] = 1;
+        $data['si_start_date'] = date('Y-m-d H:i:s', strtotime('+' . $this->parameters->get('frequency_interval') . ' ' . ucwords($this->parameters->get('frequency_unit')), time()));
+        $data['si_setup_amount'] = $this->parameters->get('amount');
       }
+      return $data;
     }
 
 }

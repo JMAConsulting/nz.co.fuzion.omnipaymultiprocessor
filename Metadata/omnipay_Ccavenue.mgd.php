@@ -176,7 +176,7 @@ return [
       'url_api_test_default' => 'http://unused.com',
       'billing_mode' => 4,
       'payment_type' => 3,
-      'is_recur' => 0,
+      'is_recur' => 1,
       'is_active' => 1,
     ],
   ],
